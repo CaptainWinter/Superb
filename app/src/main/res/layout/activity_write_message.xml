@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/titulo"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="100dp"
+                android:gravity="center"
+                android:text="Message"
+                android:textColor="#051745"
+                android:textSize="32sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.056" />
+
+            <ImageButton
+                android:id="@+id/botaoback"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/titulo"
+                android:layout_alignBottom="@id/titulo"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="#051745"
+                android:src="@drawable/left_arrow" />
+
+            <ImageButton
+                android:id="@+id/botaopreview"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/titulo"
+                android:layout_alignBottom="@id/titulo"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#051745"
+                android:src="@drawable/eye_open" />
+
+            //saudacao
+
+            <TextView
+                android:id="@+id/saudacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/intro"
+                android:layout_alignBottom="@+id/intro"
+                android:layout_marginBottom="40dp"
+                android:text="Salutations" />
+
+            <ImageButton
+                android:id="@+id/botaoaddsaudacao"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignTop="@id/titulo"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#051745"
+                android:paddingVertical="15dp"
+                android:src="@drawable/add" />
+
+            <EditText
+                android:id="@+id/intro"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/botaoaddsaudacao"
+                android:layout_alignRight="@+id/botaoaddsaudacao"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="60dp"
+                android:inputType="textCapSentences|textAutoCorrect" />
+
+
+            <Spinner
+                android:id="@+id/introspinner"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/botaoaddsaudacao"
+                android:layout_alignRight="@+id/botaoaddsaudacao"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="60dp" />
+
+
+            //Corpo da Mensagem
+
+            <TextView
+                android:id="@+id/corpomensagem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/message"
+                android:layout_alignTop="@+id/message"
+                android:layout_marginTop="-20dp"
+                android:text="Message body" />
+
+            <EditText
+                android:id="@+id/message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/introspinner"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginRight="10dp"
+                android:inputType="textCapSentences|textAutoCorrect|textMultiLine" />
+
+            //Despedida
+
+            <TextView
+                android:id="@+id/goodbye"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/goodbyetext"
+                android:layout_alignBottom="@+id/goodbyetext"
+                android:layout_marginBottom="40dp"
+                android:text="Farewell" />
+
+            <ImageButton
+                android:id="@+id/botaoaddgoodbye"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignBottom="@+id/message"
+                android:layout_alignRight="@+id/botaoaddsaudacao"
+                android:layout_marginBottom="-100dp"
+                android:backgroundTint="#051745"
+                android:paddingVertical="15dp"
+                android:src="@drawable/add" />
+
+            <EditText
+                android:id="@+id/goodbyetext"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/botaoaddgoodbye"
+                android:layout_alignRight="@+id/botaoaddgoodbye"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="60dp"
+                android:inputType="textCapSentences|textAutoCorrect" />
+
+
+            <Spinner
+                android:id="@+id/spinnerdespedida"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/botaoaddgoodbye"
+                android:layout_alignRight="@+id/botaoaddgoodbye"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="60dp" />
+
+            //Assinatura
+
+            <TextView
+                android:id="@+id/assinatura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/signaturetext"
+                android:layout_alignBottom="@+id/signaturetext"
+                android:layout_marginBottom="40dp"
+                android:text="Signature" />
+
+            <EditText
+                android:id="@+id/signaturetext"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/spinnerdespedida"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginRight="10dp"
+                android:inputType="textCapSentences|textAutoCorrect" />
+
+            //Botao para Enviar
+
+            <Button
+                android:id="@+id/botaosendmessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/signaturetext"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginEnd="50dp"
+                android:backgroundTint="#051745"
+                android:onClick="sendMessage"
+                android:paddingVertical="15dp"
+                android:text="Send"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/titulo"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="100dp"
+                android:gravity="center"
+                android:text="Salutations"
+                android:textColor="#051745"
+                android:textSize="32sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.056" />
+
+            <ImageButton
+                android:id="@+id/botaoback"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignTop="@id/titulo"
+                android:layout_alignBottom="@id/titulo"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="#051745"
+                android:src="@drawable/left_arrow" />
+
+            //saudacao
+
+            <TextView
+                android:id="@+id/saudacaoeditor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/intro"
+                android:layout_alignBottom="@+id/intro"
+                android:layout_marginBottom="40dp"
+                android:text="Salutations" />
+
+            <ImageButton
+                android:id="@+id/botaoaddsaudacaoeditor"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignTop="@id/botaoremovesaudacaoeditor"
+                android:layout_alignRight="@id/botaoremovesaudacaoeditor"
+                android:layout_marginRight="60dp"
+                android:backgroundTint="#051745"
+                android:paddingVertical="15dp"
+                android:src="@drawable/add" />
+
+            <ImageButton
+                android:id="@+id/botaoremovesaudacaoeditor"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignTop="@id/titulo"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#051745"
+                android:paddingVertical="15dp"
+                android:src="@drawable/minus" />
+
+            <EditText
+                android:id="@+id/intro"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/botaoaddsaudacaoeditor"
+                android:layout_alignRight="@+id/botaoaddsaudacaoeditor"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="60dp"
+                android:inputType="textCapSentences|textAutoCorrect" />
+
+
+            <Spinner
+                android:id="@+id/introspinnereditor"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/botaoaddsaudacaoeditor"
+                android:layout_alignRight="@+id/botaoaddsaudacaoeditor"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="60dp" />
+
+            //Quebra Gelo
+
+            <TextView
+                android:id="@+id/quebrageloeditor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/quebragelotexteditor"
+                android:layout_alignBottom="@+id/quebragelotexteditor"
+                android:layout_marginBottom="40dp"
+                android:text="Icebreaker" />
+
+            <ImageButton
+                android:id="@+id/botaoaddquebrageloeditor"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignTop="@id/botaoremovequebrageloeditor"
+                android:layout_alignRight="@id/botaoremovequebrageloeditor"
+                android:layout_marginRight="60dp"
+                android:backgroundTint="#051745"
+                android:paddingVertical="15dp"
+                android:src="@drawable/add" />
+
+            <ImageButton
+                android:id="@+id/botaoremovequebrageloeditor"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignTop="@id/introspinnereditor"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="75dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#051745"
+                android:paddingVertical="15dp"
+                android:src="@drawable/minus" />
+
+            <EditText
+                android:id="@+id/quebragelotexteditor"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/botaoaddquebrageloeditor"
+                android:layout_alignRight="@+id/botaoaddquebrageloeditor"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="60dp"
+                android:inputType="textCapSentences|textAutoCorrect" />
+
+
+            <Spinner
+                android:id="@+id/quebragelospinnereditor"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/botaoaddquebrageloeditor"
+                android:layout_alignRight="@+id/botaoaddquebrageloeditor"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="60dp" />
+
+            //Votos
+
+            <TextView
+                android:id="@+id/votoseditor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/votostexteditor"
+                android:layout_alignBottom="@+id/votostexteditor"
+                android:layout_marginBottom="40dp"
+                android:text="Votes" />
+
+            <ImageButton
+                android:id="@+id/botaoaddvotoseditor"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignTop="@id/botaoremovevotoseditor"
+                android:layout_alignRight="@id/botaoremovevotoseditor"
+                android:layout_marginRight="60dp"
+                android:backgroundTint="#051745"
+                android:paddingVertical="15dp"
+                android:src="@drawable/add" />
+
+            <ImageButton
+                android:id="@+id/botaoremovevotoseditor"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignTop="@id/quebragelospinnereditor"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="75dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#051745"
+                android:paddingVertical="15dp"
+                android:src="@drawable/minus" />
+
+            <EditText
+                android:id="@+id/votostexteditor"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:inputType="textCapSentences|textAutoCorrect"
+                android:layout_alignTop="@+id/botaoaddvotoseditor"
+                android:layout_alignRight="@+id/botaoaddvotoseditor"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginLeft="10dp"/>
+
+
+            <Spinner
+                android:id="@+id/spinnervotoseditor"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/botaoaddvotoseditor"
+                android:layout_alignRight="@+id/botaoaddvotoseditor"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="60dp" />
+
+            //Despedida
+
+            <TextView
+                android:id="@+id/goodbyeeditor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/goodbyetexteditor"
+                android:layout_alignBottom="@+id/goodbyetexteditor"
+                android:layout_marginBottom="40dp"
+                android:text="Farewell" />
+
+            <ImageButton
+                android:id="@+id/botaoaddgoodbyeeditor"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignTop="@id/botaoremovegoodbyeeditor"
+                android:layout_alignRight="@id/botaoremovegoodbyeeditor"
+                android:layout_marginRight="60dp"
+                android:backgroundTint="#051745"
+                android:paddingVertical="15dp"
+                android:src="@drawable/add" />
+
+            <ImageButton
+                android:id="@+id/botaoremovegoodbyeeditor"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignTop="@id/spinnervotoseditor"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="75dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#051745"
+                android:paddingVertical="15dp"
+                android:src="@drawable/minus" />
+
+            <EditText
+                android:id="@+id/goodbyetexteditor"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/botaoaddgoodbyeeditor"
+                android:layout_alignRight="@+id/botaoaddgoodbyeeditor"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="60dp"
+                android:inputType="textCapSentences|textAutoCorrect" />
+
+
+            <Spinner
+                android:id="@+id/spinnerdespedidaeditor"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/botaoaddgoodbyeeditor"
+                android:layout_alignRight="@+id/botaoaddgoodbyeeditor"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="60dp" />
+
+            <Button
+                android:id="@+id/botaodoneeditor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/spinnerdespedidaeditor"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginEnd="50dp"
+                android:backgroundTint="#051745"
+                android:onClick="sendMessage"
+                android:paddingVertical="15dp"
+                android:text="Concluded"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

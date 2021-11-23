@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pt.ubi.di.pdm.a43760_t0">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/appicon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/appicon_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ProjetoPDM_a43760_t0">
+        <activity
+            android:name=".Preview"
+            android:exported="false" />
+        <activity
+            android:name=".DropdownContentEditor"
+            android:exported="false" />
+        <activity
+            android:name=".WriteMail"
+            android:exported="false" />
+        <activity
+            android:name=".WriteMessage"
+            android:exported="false" />
+        <activity
+            android:name=".MessageType"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

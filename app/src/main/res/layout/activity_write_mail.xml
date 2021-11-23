@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:id="@+id/titulomail"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="100dp"
+                android:gravity="center"
+                android:text="Mail"
+                android:textColor="#051745"
+                android:textSize="32sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.056" />
+
+            <ImageButton
+                android:id="@+id/botaobackmail"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/titulomail"
+                android:layout_alignBottom="@id/titulomail"
+                android:layout_marginLeft="10dp"
+                android:backgroundTint="#051745"
+                android:gravity="center"
+                android:src="@drawable/left_arrow" />
+
+            <ImageButton
+                android:id="@+id/botaopreviewsmail"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/titulomail"
+                android:layout_alignBottom="@id/titulomail"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#051745"
+                android:gravity="center"
+                android:src="@drawable/eye_open" />
+
+            //saudacao
+
+            <TextView
+                android:id="@+id/saudacaomail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/intromail"
+                android:layout_alignBottom="@+id/intromail"
+                android:layout_marginBottom="40dp"
+                android:text="Salutations" />
+
+            <ImageButton
+                android:id="@+id/botaoaddsaudacaomail"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignTop="@id/titulomail"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="100dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="#051745"
+                android:paddingVertical="15dp"
+                android:src="@drawable/add" />
+
+            <EditText
+                android:id="@+id/intromail"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/botaoaddsaudacaomail"
+                android:layout_alignRight="@+id/botaoaddsaudacaomail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="60dp"
+                android:inputType="textCapSentences|textAutoCorrect" />
+
+
+            <Spinner
+                android:id="@+id/introspinnermail"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/botaoaddsaudacaomail"
+                android:layout_alignRight="@+id/botaoaddsaudacaomail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="60dp" />
+
+            //Quebra Gelo
+
+            <TextView
+                android:id="@+id/quebragelomail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/quebragelotextmail"
+                android:layout_alignBottom="@+id/quebragelotextmail"
+                android:layout_marginBottom="40dp"
+                android:text="Icebreaker" />
+
+            <ImageButton
+                android:id="@+id/botaoaddquebragelomail"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignLeft="@+id/botaoaddsaudacaomail"
+                android:layout_alignTop="@+id/introspinnermail"
+                android:layout_alignRight="@+id/botaoaddsaudacaomail"
+                android:layout_marginTop="75dp"
+                android:backgroundTint="#051745"
+                android:paddingVertical="15dp"
+                android:src="@drawable/add" />
+
+            <EditText
+                android:id="@+id/quebragelotextmail"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/botaoaddquebragelomail"
+                android:layout_alignRight="@+id/botaoaddquebragelomail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="60dp"
+                android:inputType="textCapSentences|textAutoCorrect" />
+
+
+            <Spinner
+                android:id="@+id/quebragelospinnermail"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/botaoaddquebragelomail"
+                android:layout_alignRight="@+id/botaoaddquebragelomail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="60dp" />
+
+            //Corpo da Mensagem
+
+            <TextView
+                android:id="@+id/corpomensagemmailmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/messagemail"
+                android:layout_alignTop="@+id/messagemail"
+                android:layout_marginTop="-20dp"
+                android:text="Message body" />
+
+            <EditText
+                android:id="@+id/messagemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/quebragelospinnermail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginRight="10dp"
+                android:inputType="textCapSentences|textAutoCorrect|textMultiLine" />
+
+            //Votos
+
+            <TextView
+                android:id="@+id/votosmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/votostextmail"
+                android:layout_alignBottom="@+id/votostextmail"
+                android:layout_marginBottom="40dp"
+                android:text="Votes" />
+
+            <ImageButton
+                android:id="@+id/botaoaddvotosmail"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignLeft="@+id/botaoaddquebragelomail"
+                android:layout_alignBottom="@+id/messagemail"
+                android:layout_alignRight="@+id/botaoaddquebragelomail"
+                android:layout_marginBottom="-100dp"
+                android:backgroundTint="#051745"
+                android:paddingVertical="15dp"
+                android:src="@drawable/add" />
+
+            <EditText
+                android:id="@+id/votostextmail"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/botaoaddvotosmail"
+                android:layout_alignRight="@+id/botaoaddvotosmail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="60dp"
+                android:inputType="textCapSentences|textAutoCorrect" />
+
+
+            <Spinner
+                android:id="@+id/spinnervotosmail"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/botaoaddvotosmail"
+                android:layout_alignRight="@+id/botaoaddvotosmail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="60dp" />
+
+            //Despedida
+
+            <TextView
+                android:id="@+id/goodbyemail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/goodbyetextmail"
+                android:layout_alignBottom="@+id/goodbyetextmail"
+                android:layout_marginBottom="40dp"
+                android:text="Farewell" />
+
+            <ImageButton
+                android:id="@+id/botaoaddgoodbyemail"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignLeft="@+id/botaoaddvotosmail"
+                android:layout_alignTop="@+id/spinnervotosmail"
+                android:layout_alignRight="@+id/botaoaddvotosmail"
+                android:layout_marginTop="75dp"
+                android:backgroundTint="#051745"
+                android:paddingVertical="15dp"
+                android:src="@drawable/add" />
+
+            <EditText
+                android:id="@+id/goodbyetextmail"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/botaoaddgoodbyemail"
+                android:layout_alignRight="@+id/botaoaddgoodbyemail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="60dp"
+                android:inputType="textCapSentences|textAutoCorrect" />
+
+
+            <Spinner
+                android:id="@+id/spinnerdespedidamail"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/botaoaddgoodbyemail"
+                android:layout_alignRight="@+id/botaoaddgoodbyemail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="60dp" />
+
+            //Assinatura
+
+            <TextView
+                android:id="@+id/assinaturamail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/signaturetextmail"
+                android:layout_alignBottom="@+id/signaturetextmail"
+                android:layout_marginBottom="40dp"
+                android:text="Signature" />
+
+            <EditText
+                android:id="@+id/signaturetextmail"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignTop="@+id/spinnerdespedidamail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginRight="10dp"
+                android:inputType="textCapSentences|textAutoCorrect" />
+
+            //Botao para Enviar
+
+            <Button
+                android:id="@+id/botaosendmessagemail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/signaturetextmail"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginEnd="50dp"
+                android:backgroundTint="#051745"
+                android:onClick="sendMessage"
+                android:paddingVertical="15dp"
+                android:text="Enviar"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
